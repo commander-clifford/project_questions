@@ -11,26 +11,31 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="fonts/stylesheet.css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
     <body>
 
-        <div class="header-container regShadow">
+        <div class="header-container">
             <header class="wrapper clearfix">
 
-                <h1 class="title"><a href="index.php?page=home">Questions</a></h1>
+                <h1 id="logo_title" class="title">
+                    <a href="index.php?page=home">Questions</a>
+                </h1>
 
                 <div class="userDisplay">
-                    <span class="testBox userThumbnailmini"></span>
-                    <span class="testBox userName">USERNAME</span>
-                    <span class="testBox userProfileButton"></span>
+                    <span class="userThumbnailmini"></span>
+                    <span class="userName">Log In</span>
+                    <a href="#" class="userProfileButton"></a>
                 </div>
                 
                 <nav class="utility">
                     <ul>
-                        <li><a href="#">Notifications</a></li>
+                        <li><a href="index.php?page=notifications">Notifications</a></li>
                         <li><a href="index.php?page=browse">Browse</a></li>
                     </ul>
                 </nav>
@@ -50,6 +55,10 @@
                 case 'browse':
                     include('screens/browse.php');
                 break;
+
+                case 'notifications':
+                    include('screens/notifications.php');
+                break;
                 
                 default:
                     include('screens/home.php');
@@ -57,12 +66,6 @@
         ?>
         
         </div> <!-- #main-container -->
-
-        <div class="footer-container">
-            <footer class="wrapper">
-                <h3>footer</h3>
-            </footer>
-        </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
