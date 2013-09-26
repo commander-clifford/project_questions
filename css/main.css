@@ -175,6 +175,7 @@
             background-position: center center;
             background-repeat: no-repeat;
             margin-left: 20px;
+            cursor: pointer;
         }
         .userProfileButton:hover{
             transform:rotate(90deg);
@@ -208,7 +209,9 @@
         nav.utility{position: absolute;right: 0;top: -3px;}
         nav.utility ul{margin: 0;padding: 0;}
         nav.utility ul li{float: left;}
-        nav.utility ul li:hover{
+        nav.utility ul li:hover, 
+        body.browse nav.utility ul li.librowse,
+        body.notifications nav.utility ul li.linotifications{
             background-color: #93cdbe;
             -webkit-border-top-left-radius: 5px;
             -webkit-border-top-right-radius: 5px;
@@ -220,7 +223,7 @@
                 0 8px 0 #7CBCAC;
         }
         nav.utility li:hover a {text-decoration: underline;}
-        nav.utility li a{padding: 15px 20px 10px; display: inline-block;text-decoration: none;}
+        nav.utility li a{padding: 15px 20px 10px; display: inline-block;text-decoration: none;text-shadow: -1px 1px 5px black;}
         
         
 
@@ -348,6 +351,15 @@
         .qpost textarea {
             width: 95%;
         }
+        #userprofile .qpost{
+            background-color: transparent;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+        }
+        p.pborder{
+            padding: 10px;
+            border: 2px solid grey;
+        }
         .iframe{
             border-radius: 5px;
             background-color: black;
@@ -369,6 +381,22 @@
             margin-left: 40px;
             margin-top: -20px;
             width: 150px;
+        }
+        .userprofileBigButtons{
+            background-color: #a17677;
+            border-radius: 5px;
+            width: 75px;
+            height: 75px;
+            padding: 10px;
+            float: right;
+            color: #FFFFFF;
+            margin: 10px;
+        }
+        .userprofileBigButtons i{
+            font-size: 50px;
+        }
+        .userprofileBigButtons p{
+            margin: 0;
         }
 /* ==========
 * Buttons and Things
@@ -407,7 +435,62 @@ a.clickButton{
                 -1px 4px 20px rgba(0,0,0,0.35);
 }
 
-
+/* ===== LIGHT BOX STYLES ===== */
+        #lightbox,
+        #lightboxbg{
+            display: none;
+            position: fixed !important;/* Stellar.JS will override this setting without !important */
+        }
+        #lightbox{ 
+            z-index: 99;
+            top: 100px;
+            left: 100px;
+            /*
+            width: 300px;
+            height: 200px;
+            background-color:#ccc;
+            border-radius: 20px;
+            padding: 10px;
+            box-shadow: 
+                inset -5px 5px 5px 0px rgba(255,255,255,0.5),
+                inset 5px -5px 5px 0px rgba(0,0,0,0.5),
+                      -5px 5px 5px 0px rgba(0,0,0,0.75);
+            */
+            }
+        #lightboxbg{
+            background-color: rgba(0,0,0,0.5);
+            top: 0px;
+            left: 0px;
+            z-index: 90;
+            width: 100%;
+            height: 100%;
+        }
+        #closelb{
+            background-color: rgba(255,0,0,1.0);
+            position: absolute;
+            z-index: 9;
+            right: 49.35%;
+            top: -53px;
+            border-radius: 20px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            box-shadow: inset -2px 2px 2px rgba(255,255,255,0.5),
+                        inset 2px -2px 2px rgba(0,0,0,0.5), 
+                        -3px 3px 0px rgba(0,0,0,0.75);
+        }
+        #closelb:hover{
+            box-shadow: inset -2px 2px 2px rgba(255,255,255,0.5),
+                        inset 2px -2px 2px rgba(0,0,0,0.5), 
+                        -3px 3px 0px rgba(0,0,0,0.75),
+                        0px 0px 5px 5px rgba(255,0,0,0.5);
+        }
+        #closelb:active{
+            box-shadow: inset -1px 1px 2px rgba(255,255,255,0.5),
+                        inset 1px -1px 2px rgba(0,0,0,0.5), 
+                        -2px 2px 0px rgba(0,0,0,0.75),
+                        0px 0px 3px 3px rgba(255,0,0,0.5);
+        }
 
 
 

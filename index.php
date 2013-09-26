@@ -18,7 +18,30 @@
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
-    <body>
+    <body class="<?php echo ($_GET['page']) ?>">
+
+        <!-- LIGHT BOX -->
+        <div id="lightbox" style="display:none;" class="">
+            <div class="wrapper clearfix">
+
+                LET THERE BE LIGHTBOX
+                
+                <!--<?php 
+                    switch($_GET['sub-page']){
+                        case 'loginreg':
+                            include('lightbox-loginreg.php');
+                        break;
+                        default:
+                            include('lightbox-loginreg.php');
+                    }
+                 ?>-->
+
+            </div>
+            <span id="closelb" href="#">
+            </span>
+        </div>
+        <div id="lightboxbg" style="display:none;"></div>
+        <!-- END LIGHT BOX -->
 
         <div class="header-container">
             <header class="wrapper clearfix">
@@ -30,13 +53,13 @@
                 <div class="userDisplay">
                     <span class="userThumbnailmini"></span>
                     <span class="userName">Log In</span>
-                    <a href="#" class="userProfileButton"></a>
+                    <span onclick="openlightbox()" class="userProfileButton" ></span>
                 </div>
                 
                 <nav class="utility">
                     <ul>
-                        <li><a href="index.php?page=notifications">Notifications</a></li>
-                        <li><a href="index.php?page=browse">Browse</a></li>
+                        <li class="linotifications"><a href="index.php?page=notifications">Notifications</a></li>
+                        <li class="librowse"><a href="index.php?page=browse">Browse</a></li>
                     </ul>
                 </nav>
             </header>
