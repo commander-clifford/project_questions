@@ -58,13 +58,14 @@
         color: #000;
         padding: 0.2em 0;
     }
-    input[type="text"]{
+    textarea,input[type="text"]{
     background-color: #ECECEC;
     border: medium none;
+    border-radius: 0 !important;
     box-shadow: -3px 0 0 0 black, 3px 0 0 0 black;
-    height: 30px;
     margin: 10px;
     }
+    input[type="text"]{height: 30px;}
     input{border: none !important;border-radius: 0 !important;}
     label{margin:10px 10px -10px;}
     a{color: #ccc}
@@ -101,6 +102,32 @@
         .title {color: white;}
         .spanBar {background-color: #363636;color: #93CD8C;}
         .regShadow{box-shadow: 0 5px 15px rgba(0,0,0,0.5);}
+    /* ===================
+        LAYOUTS: 
+        =================== */
+        /* ===== 2 COL LAYOUT ===== */
+        .cols2{width: 48%;margin:2%;}
+        .cols2:first-child {margin-left: 0;}
+        .cols2:last-child {margin-right: 0;}
+
+        /* ===== 3 COL LAYOUT ===== */
+        .cols3{width:27.33%;margin:2%;padding:1.667%;}
+        .cols3:first-child{margin-left:0;}
+        .cols3:last-child{margin-right:0;}
+
+        /* ===== 2/3 COL LAYOUT ===== */
+        .cols2-3rd{width: 62%;margin:2%;padding: 2%;}
+        .cols2-3rd:first-child{margin-left: 0}
+        .cols2-3rd:last-child{margin-right: 0}
+        /* ===== 1/3 COL LAYOUT ===== */
+        .cols1-3rd{width: 26%;margin:2%;padding: 2%;}
+        .cols1-3rd:first-child{margin-left: 0}
+        .cols1-3rd:last-child{margin-right: 0}
+
+        .cols2, .cols3, .cols2-3rd, .cols1-3rd{float: left;margin-bottom: 0; margin-top: 0;}
+
+
+
     /* ==========================================================================
         Author's custom styles
         ========================================================================== */
@@ -193,7 +220,7 @@
                 0 8px 0 #7CBCAC;
         }
         nav.utility li:hover a {text-decoration: underline;}
-        nav.utility li a{margin: 15px 20px 10px; display: inline-block;text-decoration: none;}
+        nav.utility li a{padding: 15px 20px 10px; display: inline-block;text-decoration: none;}
         
         
 
@@ -297,30 +324,52 @@
         .footer {
             margin-bottom: 150px;
         }
-        
-        /* ===== 2 COL LAYOUT ===== */
-        .cols2{width: 48%;margin:2%;}
-        .cols2:first-child {margin-left: 0;}
-        .cols2:last-child {margin-right: 0;}
-
-        /* ===== 3 COL LAYOUT ===== */
-        .cols3{width:27.33%;margin:2%;padding:1.667%;}
-        .cols3:first-child{margin-left:0;}
-        .cols3:last-child{margin-right:0;}
-
-        /* ===== 2/3 COL LAYOUT ===== */
-        .cols2-3rd{width: 62%;margin:2%;padding: 2%;}
-        .cols2-3rd:first-child{margin-left: 0}
-        .cols2-3rd:last-child{margin-right: 0}
-        /* ===== 1/3 COL LAYOUT ===== */
-        .cols1-3rd{width: 26%;margin:2%;padding: 2%;}
-        .cols1-3rd:first-child{margin-left: 0}
-        .cols1-3rd:last-child{margin-right: 0}
-
-        .cols2, .cols3, .cols2-3rd, .cols1-3rd{float: left;margin-bottom: 0; margin-top: 0;}
-
-
-
+        .qpost {
+            position: relative;
+            background-color: #D5D4D4;
+            margin-top: 60px;
+            margin-bottom: 100px;
+            padding: 10px 50px 50px;
+        }
+        .qpostinfo{
+            left: -40px;
+            position: absolute;
+            top: -40px;
+            width: 250px;
+        }
+        .qpost form {
+            margin: 0 auto;
+            width: 90%;
+        }
+        .qpost label{font-size: 18px; margin:10px 0 0;}
+        .qpost input{
+            float: right;
+        }
+        .qpost textarea {
+            width: 95%;
+        }
+        .iframe{
+            border-radius: 5px;
+            background-color: black;
+            padding:10px;
+            width: 60px;
+            float: left;
+            margin-right: 20px;
+        }
+        .qpost i{font-size: 60px;color: #FFFFFF;}
+        .qpostinfo p {
+            font-size: 13px;
+            line-height: 1.5;
+            margin: 0;
+        }
+        .qpost input[type="radio"] {
+            float: none;
+        }
+        label.opitons {
+            margin-left: 40px;
+            margin-top: -20px;
+            width: 150px;
+        }
 /* ==========
 * Buttons and Things
 ========== */
