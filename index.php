@@ -24,21 +24,12 @@
         <div id="lightbox" style="display:none;" class="">
             <div class="wrapper clearfix">
 
-                LET THERE BE LIGHTBOX
                 
-                <!--<?php 
-                    switch($_GET['sub-page']){
-                        case 'loginreg':
-                            include('lightbox-loginreg.php');
-                        break;
-                        default:
-                            include('lightbox-loginreg.php');
-                    }
-                 ?>-->
+                <div style="display:none;" id="loginButton"><?php include('screens/lightbox-addPost.php'); ?></div>
+                <div style="display:none;" id="loginButton"><?php include('screens/lightbox-addPost.php'); ?></div>
 
             </div>
-            <span id="closelb" href="#">
-            </span>
+            <span id="closelb" href="#"><i class="icon-remove"></i></span>
         </div>
         <div id="lightboxbg" style="display:none;"></div>
         <!-- END LIGHT BOX -->
@@ -51,9 +42,9 @@
                 </h1>
 
                 <div class="userDisplay">
-                    <span class="userThumbnailmini"></span>
-                    <span class="userName">Log In</span>
-                    <span onclick="openlightbox()" class="userProfileButton" ></span>
+                    <a href="index.php?page=userProfile" class="userThumbnailmini"></a>
+                    <a href="index.php?page=userProfile" class="userName">Log In</a>
+                    <span onclick="openaddPost(); openlightbox();" class="userProfileButton" ></span>
                 </div>
                 
                 <nav class="utility">
@@ -81,6 +72,10 @@
 
                 case 'notifications':
                     include('screens/notifications.php');
+                break;
+
+                case 'userProfile':
+                    include('screens/userProfile.php');
                 break;
                 
                 default:

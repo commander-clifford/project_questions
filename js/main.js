@@ -32,5 +32,8 @@
 		$('#lightbox').fadeOut(500);
 		$('#lightboxbg').fadeOut(500);
 	}
+	function openaddPost(){
+		$('#loginButton').fadeIn(500);
+	}
 
 
